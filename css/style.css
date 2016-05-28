@@ -1,0 +1,112 @@
+body {
+color:#FFF;
+background:#222;
+font-family: 'Exo 2', 'Helvetica', sans-serif;
+font-weight:100;
+overflow:hidden;
+-webkit-font-smoothing:antialiased;
+-webkit-box-sizing:border-box;
+box-sizing:border-box;
+}
+
+.day {
+	-webkit-filter:invert(1);
+}
+.day .gradient, .day #piano {background-color:#000;}
+* {-webkit-box-sizing:border-box;
+box-sizing:border-box;}
+
+aside {width:110px; float:left;}
+main {float: left;
+    width: calc(100% - 120px);
+    height: 100%;
+}
+h1,h2,h3,h4,h5,a,p {font-weight:100;}
+
+ul {padding:0;}
+li {float:left; display:inline;}
+.gradient , .hive {
+    width: 100%;
+    height: 100%;
+    background-color:#222;
+	/*background-image: linear-gradient(-180deg, #C1309C 0%, #3B4F5E 100%);*/
+	background-size:100%;
+	top:0;left:0;
+	height:400vh;
+	position:absolute;
+	overflow:hidden;
+	z-index:1;
+}
+
+.hive {
+	position:fixed;
+	height:100vh;
+    background-image: url("../img/box1.png");
+    background-size: 40px;
+    opacity: 0.4;
+
+}
+
+
+
+.switchbox {position:fixed;z-index:9;top:5px;right:5px;width: 100px;
+    height: 35px;}
+.switchbox li {width:50%;height:100%;float:left;padding: 5px;
+    text-align: center;}
+
+.switchbox li.on {
+	transform-origin:top;
+	transform:rotateX(40deg);
+}
+
+.switchbox li.on:after {
+    content: "";
+    /* background: rgba(255, 255, 255, 0.58); */
+    height: 20px;
+    background-image: linear-gradient(-180deg, #FFFFFF 0%,#FFFFFF 37%, rgba(255,255,255,0.26) 100%);
+    width: 100%;
+    display: block;
+    position: absolute;
+    left: 0px;
+}
+
+.switchbox li#night.on:after {
+background-image: linear-gradient(-180deg, #000000 0%, rgba(0,0,0,0.06) 100%);
+}
+.switchbox li#night {
+	color:#FFF;
+	background:#222;
+
+}
+.switchbox li#day {
+	color:#000;
+	background:#FFF;
+}
+#piano {
+	position:relative;
+	display:inline-block;
+	float:left;	
+	width:100px;margin:0;
+	background:#222;
+}
+
+#piano li {
+	cursor:pointer;
+    width: 100px;
+    height: 100px;
+    padding: 36px;
+    float: left;
+    display: inline;
+    border: 1px #fff solid;
+    background: none;
+    transition: 0.3s ease-out;
+}
+
+.day #piano li, .day .switchbox li {
+	-webkit-filter:invert(1);
+}
+#piano li.on {color:#222;background:#FFF;}
+
+/*#piano li:hover {
+	//-webkit-filter:invert(1);
+}*/
